@@ -1,7 +1,44 @@
-.Instructions-font-colour{
-    color: chocolate;
+body{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
 }
 
-.Instructions-font-colour-border{
-    border: aqua solid 1rem;
+.accordian{
+    width: 800px;
+}
+
+
+.accordian .contentBox{
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordian .contentBox .label{
+    position: relative;
+    padding: 10px;
+    background: darkblue;
+    color: chocolate;
+    cursor: pointer;
+}
+
+.accordian .contentBox .label::before{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.accordian .contentBox .content{
+    position: relative;
+    background: white;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    overflow-y: auto;
 }
