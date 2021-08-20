@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../quizStylesheet.css">
+    <link rel="stylesheet" href="../UserLevels.css">
+    <title>Edit Users & Quiz</title>
+</head>
+<div id="top-section">
+        <button type="button" id="edit-back-button">Back</button>
+</div>
+<div id="edit-container">
+
+        <div id="delete-Forms">   
+            <form class="delete-form" id="deleteForm">
+                <H1 id="deletePlayerHeader">Delete Player</H1>
+                    <input type="email" placeholder="Email" id="deletePlayer">
+                    <button onclick="deletePlayer()">Delete Player</button>
+            </form>
+    
+
+
+            <form class="delete-form-two" id="deleteFormTwo">
+                <H1 id="deleteQuizHeader">Delete Quiz</H1>
+                    <input type="email" placeholder="Quiz" id="deleteQuiz">
+                    <button onclick="deleteQuiz()">Delete Quiz</button>
+            </form>
+        </div>
+
+        <div id="add-Forms">
+
+                <H1 id="addPlayerHeader">Add Player</H1>
+                <table id="addPlayerTable">
+                    <tr>
+                        <td>
+                            <input type="text" id="add-player-form-name" placeholder="Name">
+                        </td>
+                    </tr>
+                <br>
+                    <tr>
+                        <td>
+                            <input type="email" id="add-player-form-email" placeholder="Email" required>
+                        </td>
+                    </tr>
+                <br>
+                    <tr>
+                        <td>
+                            <input type="password" id="add-player-form-password" placeholder="Password" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" id="add-player-ageOfPlayer" placeholder="age"required>
+                        </td>
+                    </tr>
+                            
+                </table>
+                <button onclick="addPlayer()">Add Player</button>
+
+                <form class="addQuiz" id="addQuiz">
+                    <H1 id="addQuizHeader">Add Quiz</H1>
+                    <input type="email" placeholder="Quiz" id="addQuizInput">
+                    <button onclick="deleteQuiz()">Delete Quiz</button>
+                </form>
+        </div>        
+           
+</div>
+
+     
+        
+
+
+
+
+    <script src="../edit.js"></script>
+</body>
+</html>
