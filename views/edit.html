@@ -15,9 +15,9 @@
 
         <div id="delete-Forms">   
             <form class="delete-form" id="deleteForm">
-                <H1 id="deletePlayerHeader">Delete Player</H1>
+                <h1 id="deletePlayerHeader">Delete Player</h1>
                     <input type="email" placeholder="Email" id="deletePlayer">
-                    <button onclick="deletePlayer()">Delete Player</button>
+                    <button id="deletePlayerBtn" type="button">Delete Player</button>
             </form>
     
 
@@ -57,7 +57,7 @@
                     </tr>
                             
                 </table>
-                <button onclick="addPlayer()">Add Player</button>
+                <button onclick="progressToQuizPage();" type="button" id="addPlayerButton">Add Player</button>
 
                 <form class="addQuiz" id="addQuiz">
                     <H1 id="addQuizHeader">Add Quiz</H1>
@@ -74,6 +74,13 @@
 
 
 
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="../pouchdb-7.2.1.min.js"></script>
+    <script>
+        const db2 = new PouchDB('quiz_Database');
+        const db = new PouchDB('quizAdmin_Database');
+    </script>
     <script src="../edit.js"></script>
 </body>
 </html>
