@@ -1,5 +1,3 @@
-var db = new PouchDB ('quiz_Database');
-
 function checkEmail() {
     try{
         var p = $('#form-email').val();
@@ -53,7 +51,7 @@ function progressToQuizPage() {
            // userLevel: userLevel()
         };
 
-        db.put(doc,function(err,res){
+        db2.put(doc,function(err,res){
             if(err){
                 switch(err.message){
                     case 'Document update conflict':
@@ -76,13 +74,23 @@ function progressToQuizPage() {
 
 }
 
-// function logInToQuiz(){
-//     var email = $('#form-email').val();
-//     var password = $('#form-password').val();
-//     var allUsers = db.allDocs(){
-//          
-//     }
-// }
+function logInToQuiz(e){
+    e.preventDefault();
+    var email = $('#form-email').val();
+    var password = $('#form-password').val();
+    db2.find({
+        selector: {
+          email: email,
+          password: password
+        }
+      }).then(function(doc){
+          console.log(JSON.stringify(doc));
+      }).catch(function(error){
+          console.error(JSON.stringify(error));
+      });
+    }
+
+    $('#logInButton').on('click',logInToQuiz);
 
 document.querySelector('#UserLevelButton').addEventListener('click', () => {
     window.location.href = './UserLevel.html';
