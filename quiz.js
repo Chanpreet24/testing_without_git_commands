@@ -76,18 +76,18 @@ function progressToQuizPage() {
 
 function logInToQuiz(e){
     e.preventDefault();
-    var email = $('#form-email').val();
-    var password = $('#form-password').val();
-    db2.find({
-        selector: {
-          email: email,
-          password: password
-        }
-      }).then(function(doc){
-          console.log(JSON.stringify(doc));
-      }).catch(function(error){
-          console.error(JSON.stringify(error));
-      });
+    var email = $('#formLogin-email').val();
+    var password = $('#formLogin-password').val();
+    db2.createIndex({
+        index: {fields: ['email', 'password']}
+        }).then(function(){                         //.then contains a function block which allows us to find email and password based on the index created above.
+        return db2.find({selector: {
+            email: email,
+            password: password
+          }});
+         }).then(function(res){
+          console.log(JSON.stringify(res.docs[0]));
+         });
     }
 
     $('#logInButton').on('click',logInToQuiz);
