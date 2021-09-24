@@ -1,0 +1,155 @@
+:root{
+    background-color: black;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#signuptitle{
+    color: chocolate;
+}
+
+#logInTitle{
+    color: chocolate;
+}
+
+#container{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#main-title{
+    text-align: center;
+    color: chocolate;
+}
+
+.sign-up-form{
+    border: white solid 5px;
+    padding: 10px;
+}
+
+#form-name{
+    margin-bottom: 10px;
+    text-decoration: white;
+    margin-left: 45px;
+}
+
+#form-password{
+    margin-bottom: 10px;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+#form-email{
+    margin-bottom: 10px;
+    margin-left: 45px;
+}
+
+#ageOfPlayer{
+    margin-left: 45px;
+    margin-bottom: 10px;
+}
+
+#userLevel{
+    margin-left: 45px;
+}
+
+Button{
+    width: 200px;
+    color: chocolate;
+    background-color: chocolate(250, 215, 17);
+    position: relative;
+    margin-top: 15px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+Button:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+#signupsubmit{
+    color: chocolate;
+    font-weight: bold;
+    background-color: white;
+    margin-top: 15px;
+}
+
+#signupsubmit:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+
+#formLogin-email{
+    margin-bottom: 10px;
+    margin-left: 45px;
+}
+
+#formLogin-password{
+    margin-bottom: 10px;
+    margin-left: 45px;
+}
+
+
+
+
+
+
+.backButton{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5rem;
+ }
+ 
+ #top-section{
+     min-height: 900px;
+ }
+ 
+ #edit-back-button{
+     margin-right: 600px;
+ }
+ 
+ #edit-container{
+     margin-right: 700px;
+     justify-content: center;
+     text-align: center;
+ }
+ 
+ #addPlayerTable{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+#addQuizTable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#deletePlayerHeader{
+    text-align: center;
+    color: chocolate;
+}
+
+#deleteQuizHeader{
+    text-align: center;
+    color: chocolate;
+}
+
+#addPlayerHeader{
+    text-align: center;
+    color: chocolate;
+}
+
+#addQuizHeader{
+    text-align: center;
+    color: chocolate;
+}
+
